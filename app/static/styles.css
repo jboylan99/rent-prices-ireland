@@ -1,0 +1,172 @@
+body {
+  background-color: #F0FFFF;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Dark mode version of the body. */
+.dark-mode {
+  background-color: #264040;
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Images invert twice so that they don't actually invert. */
+.dark-mode img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.dark-mode #content {
+  background-color: #dfecec;
+}
+
+h1 {
+  color: black;
+  font-family: Tahoma;
+  font-weight: 900;
+}
+
+.legend {
+  padding-left: 200px;
+}
+
+/* Navbar */
+.header {
+  height: 120px;
+  background: #20B2AA;
+  color: white;
+  font-family: Tahoma;
+  font-weight: 900;
+}
+
+/* Website logo */
+.logo {
+  display: inline-block;
+  width: 197px;
+  height: 86px;
+  margin-top: 15px;
+  margin-left: 50px;
+
+}
+.header a {
+  float: left;
+  text-align: left;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 90px;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+
+.header a:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+
+h3 {
+  color: black;
+  font-family: Tahoma;
+}
+
+h4 {
+  color: black;
+  font-family: Tahoma;
+}
+p {
+  color: black;
+  font-family: Tahoma;
+}
+
+li {
+  color: black;
+  font-family: Tahoma;
+}
+
+label {
+  color: black;
+  font-family: Tahoma;
+}
+
+/* Submit button */
+button:hover {
+  opacity: 0.8;
+}
+
+button {
+  position: relative;
+  background-color: #008B8B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: Tahoma;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#content {
+  padding: 25px;
+  border-style: solid;
+  border-color: #D3D3D3;
+  border-width: 2px;
+  background-color: white;
+  color: black;
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.header li {
+  display: inline;
+}
+
+/* Style the links inside the navigation bar */
+.header a {
+  float: right;
+  color: white;
+  text-align: top;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Hyperlink changes colour on hover. */
+a:hover {
+  color: orange;
+}
+
+/* Select form */
+select {
+  position: relative;
+  font-family: Tahoma;
+  font-size: 18px;
+  display: inline-block;
+  width: 12%;
+}
+
+/* Dark mode button */
+.icon {
+  float: right;
+  margin-top: 35px;
+  margin-right: 50px;
+}
+
+.icon button {
+  background-color: #20B2AA;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  float: left;
+}
+
+/* Centres images */
+.centre {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

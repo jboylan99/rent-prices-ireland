@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Home | Rent Prices Ireland</title>
+ <link rel="stylesheet" href="../static/styles.css">
+
+</head>
+
+ <div class="icon">
+  <button class="dark-toggle"><span>&#10050;</span></button>
+ </div>
+<!-- Navigation bar -->
+ <nav class="header">
+  <ul>
+   <img class ="logo" src="/static/logo.png" alt="Rent Prices Ireland logo" />
+   <li><a href="/nationalstatistics">National Statistics</a></li>
+   <li><a href="/countystatistics">County Statistics</a></li>
+   <li><a href="/">Home</a></li>
+  </ul>
+ </nav>
+ <br>
+ 
+ <div id = "content">
+  <h1>Home</h1>
+  <p><i>Rent Prices Ireland</i> is an application designed to allow students to view rent prices around Ireland. If you're a student looking for a place to stay in college, this site should have all the information you need. You can view information by county in County Statistics and you can see the countrywide breakdown in National Statistics.</p>
+
+  <p>All data was based on a publicly available dataset from the Central Statistics Office at <a href="https://data.cso.ie/">CSO.ie</a>.</p>
+ </div>
+ <br>
+ <div id = "content">
+ 	<h1>Predictive Models Used</h1>
+
+ 	<p>Many different machine learning algorithms were used in order to make the findings as accurate as possible. The following algorithms were used to predict
+  rent prices:</p><br>
+  <ul>
+    <li>Moving average</li>
+    <br>
+    <li>Linear regression</li>
+    <br>
+    <li>K-nearest neighbour</li>
+    <br>
+    <li>Gradient boosting</li>
+    <br>
+    <li>Long short term memory</li>
+    <br>
+    <li>Random forest</li>
+    <br>
+    <li>ARIMA</li>
+  </ul><br>
+  <p>After extensive testing, ARIMA was chosen as the algorithm to be used.</p>
+ </div><br>
+ <div id = 'content'>
+  <h1>What is ARIMA?</h1>
+  <p>Autoregressive integrated moving average (ARIMA) is a machine learning algorithm used to solve time series problems. Time series analysis is the study of a series of data points ordered by time, and ARIMA studies this data by examining its previous values to forecast future results.</p>
+
+  <p>More information on the ARIMA algorithm can be found <a href= 'https://people.duke.edu/~rnau/411arim.htm'>here</a>.</p>
+
+ </div>
+
+ <script type="text/javascript" src="../static/darkmode.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>{{ county }} Prediction | Rent Prices Ireland</title>
+ <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+
+ <div class="icon">
+  <button class="dark-toggle"><span>&#10050;</span></button>
+ </div>
+<!-- Navigation bar -->
+<nav class="header">
+  <ul>
+   <img class ="logo" src="/static/logo.png" alt="Rent Prices Ireland logo" />
+   <li><a href="/nationalstatistics">National Statistics</a></li>
+   <li><a href="/countystatistics">County Statistics</a></li>
+   <li><a href="/">Home</a></li>
+  </ul>
+ </nav>
+ <br>
+
+ <div id = "content">
+  <span class="dark-mode-ignore"><img src="/static/county-crests/{{ county }}-crest.png" alt="{{ county }} Crest" width="300" height="325" align="right"><span>
+  <h1>{{ county }} Prediction</h1>
+  <p>The predicted price for county {{ county }} is <b>€{{ price }}</b> per person each month.
+    <br><br>
+    This is the price for the following entries:
+    <br><br>
+    Year: <b>{{ year }}</b>
+    <br><br>
+    Quarter: <b>{{ year }}{{ quarter }}</b>
+    <br><br>
+    Bedrooms: <b>{{ rooms }}</b>
+    <br><br>
+    If you're interested in viewing properties in this
+  	area, you can check some out on <a href='https://www.daft.ie/property-for-rent/'onclick="location.href=this.href+countyLink+'?numBeds_from={{ rooms }}&numBeds_to={{ rooms }}';return false;">Daft.ie.</a>
+  	<br><br>
+    Graphs and Statistics related to the area can be viewed below.
+    <br><br>
+  	<a href='/countystatistics'>Back to county map</a>
+  </p>
+  <p id = "output"></p>
+ </div>
+ <br>
+ <div id="content">
+  <h1>Graphs and Statistics for {{ county }}</h1>
+  <span class="dark-mode-ignore"><img src="../static/graphs/{{ county }}.png" alt="{{ county }} Forecast" class = "centre"><span>
+ </div>
+
+ <!-- Script to make the county name lower case so it can be placed in daft.ie URL. -->
+ <script>
+  var val = '{{ county }}';
+  var countyLink = val.toLowerCase();
+ </script>
+ <script type="text/javascript" src="../static/darkmode.js"></script>
+</body>
+</html>

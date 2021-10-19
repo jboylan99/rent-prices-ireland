@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>{{ county }} | Rent Prices Ireland</title>
+ <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+ <div class="icon">
+  <button class="dark-toggle"><span>&#10050;</span></button>
+ </div>
+<!-- Navigation bar -->
+ <nav class="header">
+  <ul>
+   <img class ="logo" src="/static/logo.png" alt="Rent Prices Ireland logo" />
+   <li><a href="/nationalstatistics">National Statistics</a></li>
+   <li><a href="/countystatistics">County Statistics</a></li>
+   <li><a href="/">Home</a></li>
+  </ul>
+ </nav>
+ <br>
+
+ <div id="content">
+  <span class="dark-mode-ignore"><img src="/static/county-crests/{{ county }}-crest.png" alt="{{ county }} Crest" width="300" height="325" align="right"><span>
+  <h1>{{ county }}</h1>
+  <p>View information pertaining to {{ county }} regarding rent prices in the county.</p>
+
+  <form method="post" id ="form"action="{{ url_for('result') }}">
+   <label for="year">Select the year you want to rent:</label><br><br>
+   <select required id="year" name="year">
+    <option value="none" selected disabled>Year</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+   </select>
+   <br><br>
+   <label for="quarter">Select which quarter you want to rent in:</label><br><br>
+   <select required name="quarter" id="quarter">
+    <option value="" disabled selected>Quarter</option>
+   	<option value="-01-01">Q1</option>
+    <option value="-04-01">Q2</option>
+    <option value="-07-01">Q3</option>
+    <option value="-10-01">Q4</option>
+   </select>
+   <br><br>
+   <label for="rooms">Select the number of bedrooms you want:</label><br><br>
+   <select required name="rooms" id="rooms">
+    <option value="" disabled selected>Bedrooms</option>
+   	<option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+   </select>
+   <br><br>
+   <label for="county">The county you have chosen is:</label><br><br>
+   <select name="county" id="county">
+    <option value='{{ county }}'>{{ county }}</option>
+   </select>
+   <br><br>
+   <p>Please understand that the result may take a few seconds to load.</p>
+   <button style = "position: absolute; right: 300px;">Submit</button>
+  </form>
+  <br><br><br>
+ </div>
+ <script type="text/javascript" src="../static/darkmode.js"></script>
+</body>
+</html>
